@@ -1,199 +1,410 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINELY — Privacy Policy</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f4ff; color: #1a1a2e; line-height: 1.7; }
-  .hero { background: linear-gradient(135deg, #6B5FD4, #3D2E9C); color: white; padding: 48px 24px 40px; text-align: center; }
-  .hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; }
-  .hero p { opacity: 0.8; margin-top: 8px; font-size: 0.95rem; }
-  .lang-toggle { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
-  .lang-btn { padding: 8px 20px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.4); background: transparent; color: white; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
-  .lang-btn.active { background: white; color: #6B5FD4; border-color: white; }
-  .container { max-width: 780px; margin: 0 auto; padding: 40px 24px 80px; }
-  .updated { text-align: center; color: #888; font-size: 0.85rem; margin-bottom: 32px; }
-  h2 { font-size: 1.15rem; font-weight: 700; color: #6B5FD4; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1.5px solid #e8e6ff; }
-  h2:first-of-type { margin-top: 0; }
-  p, li { color: #333; font-size: 0.95rem; margin-bottom: 10px; }
-  ul { padding-left: 20px; margin-bottom: 12px; }
-  li { margin-bottom: 6px; }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
-  th { background: #6B5FD4; color: white; padding: 10px 14px; text-align: left; font-weight: 600; }
-  td { padding: 10px 14px; border-bottom: 1px solid #e8e6ff; }
-  tr:nth-child(even) td { background: #f9f8ff; }
-  .rights { display: grid; gap: 8px; margin: 12px 0; }
-  .right-item { background: #f0eeff; border-left: 3px solid #6B5FD4; padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 0.9rem; }
-  .contact-box { background: linear-gradient(135deg, #6B5FD4, #3D2E9C); color: white; border-radius: 16px; padding: 24px; margin-top: 32px; text-align: center; }
-  .contact-box a { color: #c8bfff; }
-  .section { display: none; }
-  .section.active { display: block; }
-  a { color: #6B5FD4; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — LINELY</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #7B5EA7;
+      --purple-light: #EDE9F6;
+      --text: #1A1A2E;
+      --text-sec: #555570;
+      --bg: #FAFAF9;
+      --border: #E8E4F0;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, #7B5EA7, #A07CD0);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -1px;
+    }
+
+    .logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 1px;
+    }
+
+    h1 { font-size: 28px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .subtitle { color: var(--text-sec); font-size: 15px; }
+    .updated { font-size: 13px; color: var(--text-sec); margin-top: 6px; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 0 80px;
+    }
+
+    .toc {
+      background: var(--purple-light);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .toc-title { font-size: 13px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 4px; }
+    .toc a { color: var(--purple); font-size: 14px; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--purple-light);
+    }
+
+    h3 { font-size: 16px; font-weight: 600; margin: 18px 0 8px; }
+
+    p { margin-bottom: 12px; font-size: 15px; color: var(--text-sec); }
+    p strong { color: var(--text); }
+
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: var(--text-sec); margin-bottom: 6px; }
+    li strong { color: var(--text); }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .card-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .card p { margin: 0; font-size: 14px; }
+
+    .tag {
+      display: inline-block;
+      background: var(--purple-light);
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      background: #FFF8E7;
+      border-left: 4px solid #F59E0B;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+    }
+    .highlight p { color: #7C5A00; margin: 0; font-size: 14px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th {
+      background: var(--purple-light);
+      color: var(--purple);
+      font-weight: 700;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 13px;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-sec);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    a { color: var(--purple); }
+
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 0 48px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-sec);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer a { color: var(--purple); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      h2 { font-size: 17px; }
+      footer { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
-<div class="hero">
-  <h1>&#x1F4D4; LINELY</h1>
-  <p>Privacy Policy &bull; Politique de Confidentialit&eacute;</p>
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="showLang('fr',this)">&#x1F1EB;&#x1F1F7; Fran&ccedil;ais</button>
-    <button class="lang-btn" onclick="showLang('en',this)">&#x1F1EC;&#x1F1E7; English</button>
+
+<header>
+  <a class="logo" href="https://linely.app">
+    <div class="logo-mark">L</div>
+    <span class="logo-name">LINELY</span>
+  </a>
+  <h1>Politique de confidentialité</h1>
+  <p class="subtitle">Le journal que tu vas vraiment tenir — et tes données restent les tiennes.</p>
+  <p class="updated">Dernière mise à jour : 12 avril 2025</p>
+</header>
+
+<main>
+
+  <div class="toc">
+    <div class="toc-title">Sommaire</div>
+    <ol>
+      <li><a href="#qui">Qui sommes-nous</a></li>
+      <li><a href="#collecte">Données collectées</a></li>
+      <li><a href="#utilisation">Comment nous les utilisons</a></li>
+      <li><a href="#stockage">Stockage et sécurité</a></li>
+      <li><a href="#tiers">Services tiers</a></li>
+      <li><a href="#droits">Tes droits (RGPD)</a></li>
+      <li><a href="#mineurs">Mineurs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
   </div>
-</div>
 
-<div class="container">
+  <!-- 1. Qui -->
+  <section id="qui">
+    <h2>1. Qui sommes-nous</h2>
+    <p>
+      LINELY est une application iOS de journaling développée et éditée par
+      <strong>Alexandre Mls</strong>, développeur indépendant basé en France.
+    </p>
+    <p>
+      Contact : <a href="mailto:support@linely.app">support@linely.app</a><br>
+      Cette politique s'applique à l'application iOS LINELY et à toutes ses fonctionnalités.
+    </p>
+  </section>
 
-<div id="fr" class="section active">
-<p class="updated">Derni&egrave;re mise &agrave; jour : 12 avril 2026</p>
-<h2>1. Qui sommes-nous ?</h2>
-<p>LINELY est une application de journal intime num&eacute;rique d&eacute;velopp&eacute;e par Alexandre Xmls.<br><strong>Contact :</strong> support@linely.fr</p>
-<h2>2. Donn&eacute;es collect&eacute;es</h2>
-<p><strong>Que tu nous fournis :</strong></p>
-<ul>
-<li>Compte : e-mail, pr&eacute;nom, nom d&rsquo;utilisateur</li>
-<li>Profil : photo de profil, biographie (optionnels)</li>
-<li>Journal : textes, humeurs, photos, enregistrements audio</li>
-<li>Contenu social : posts partag&eacute;s, r&eacute;actions, encouragements</li>
-</ul>
-<p><strong>Automatiquement :</strong> streak, nombre d&rsquo;entr&eacute;es, version app, type d&rsquo;appareil, token de notification push.</p>
-<p><strong>Ce que nous ne collectons PAS :</strong> localisation GPS, contacts t&eacute;l&eacute;phoniques, donn&eacute;es de navigation externe, donn&eacute;es biom&eacute;triques.</p>
-<h2>3. Pourquoi utilisons-nous ces donn&eacute;es ?</h2>
-<table>
-<tr><th>Finalit&eacute;</th><th>Base l&eacute;gale</th></tr>
-<tr><td>Fournir et faire fonctionner l&rsquo;app</td><td>Ex&eacute;cution du contrat</td></tr>
-<tr><td>Envoyer des notifications de rappel</td><td>Consentement</td></tr>
-<tr><td>G&eacute;rer l&rsquo;abonnement LINELY+</td><td>Ex&eacute;cution du contrat</td></tr>
-<tr><td>Am&eacute;liorer l&rsquo;exp&eacute;rience utilisateur</td><td>Int&eacute;r&ecirc;t l&eacute;gitime</td></tr>
-<tr><td>Pr&eacute;venir la fraude et les abus</td><td>Int&eacute;r&ecirc;t l&eacute;gitime</td></tr>
-<tr><td>Respecter nos obligations l&eacute;gales</td><td>Obligation l&eacute;gale</td></tr>
-</table>
-<h2>4. O&ugrave; sont stock&eacute;es tes donn&eacute;es ?</h2>
-<p>Tes donn&eacute;es sont h&eacute;berg&eacute;es sur <strong>Supabase</strong> (serveur <strong>EU West &mdash; Paris, France</strong>), dans l&rsquo;Union Europ&eacute;enne, conform&eacute;ment au RGPD. Les abonnements sont g&eacute;r&eacute;s par <strong>RevenueCat</strong> (conforme RGPD).</p>
-<h2>5. Partage des donn&eacute;es</h2>
-<p>Nous ne vendons jamais tes donn&eacute;es. Nous les partageons uniquement avec :</p>
-<ul>
-<li><strong>Supabase</strong> &mdash; h&eacute;bergement base de donn&eacute;es (EU)</li>
-<li><strong>RevenueCat</strong> &mdash; gestion des abonnements</li>
-<li><strong>Apple</strong> &mdash; Sign in with Apple et notifications push</li>
-<li><strong>Autorit&eacute;s comp&eacute;tentes</strong> &mdash; si requis par la loi</li>
-</ul>
-<h2>6. Dur&eacute;e de conservation</h2>
-<ul>
-<li>Compte actif : jusqu&rsquo;&agrave; suppression</li>
-<li>Apr&egrave;s suppression : donn&eacute;es effac&eacute;es sous <strong>30 jours</strong></li>
-<li>Donn&eacute;es de facturation : conserv&eacute;es 10 ans (obligation l&eacute;gale)</li>
-</ul>
-<h2>7. Tes droits (RGPD)</h2>
-<div class="rights">
-<div class="right-item">&#x2705; <strong>Acc&egrave;s</strong> &mdash; consulter tes donn&eacute;es (Art. 15)</div>
-<div class="right-item">&#x2705; <strong>Rectification</strong> &mdash; corriger tes donn&eacute;es (Art. 16)</div>
-<div class="right-item">&#x2705; <strong>Effacement</strong> &mdash; droit &agrave; l&rsquo;oubli (Art. 17)</div>
-<div class="right-item">&#x2705; <strong>Export</strong> &mdash; disponible dans l&rsquo;app : Param&egrave;tres &rarr; Exporter (Art. 20)</div>
-<div class="right-item">&#x2705; <strong>Opposition</strong> au traitement (Art. 21)</div>
-<div class="right-item">&#x2705; <strong>Limitation</strong> du traitement (Art. 18)</div>
-</div>
-<p style="margin-top:12px">Pour exercer tes droits : <a href="mailto:support@linely.fr">support@linely.fr</a><br>
-R&eacute;clamation : <strong>CNIL</strong> &mdash; <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a> &bull; <strong>ICO (UK)</strong> &mdash; <a href="https://www.ico.org.uk" target="_blank">www.ico.org.uk</a></p>
-<h2>8. Droits CCPA (Californie)</h2>
-<p>Si tu r&eacute;sides en Californie, tu peux demander quelles donn&eacute;es nous d&eacute;tenons et leur suppression. <strong>Nous ne vendons pas tes donn&eacute;es.</strong> Contact : <a href="mailto:support@linely.fr">support@linely.fr</a></p>
-<h2>9. S&eacute;curit&eacute;</h2>
-<ul>
-<li>Chiffrement en transit (HTTPS/TLS)</li>
-<li>Chiffrement au repos (Supabase)</li>
-<li>Row Level Security &mdash; tes entr&eacute;es ne sont accessibles que par toi</li>
-<li>Face ID / Touch ID trait&eacute; localement sur l&rsquo;appareil uniquement</li>
-</ul>
-<h2>10. &Acirc;ge minimum</h2>
-<p>LINELY est destin&eacute; aux personnes &acirc;g&eacute;es de <strong>13 ans et plus</strong>.</p>
-<h2>11. Modifications</h2>
-<p>Toute modification substantielle sera notifi&eacute;e via l&rsquo;application.</p>
-<div class="contact-box">
-  <p style="color:white;font-weight:700;font-size:1.1rem">&#x1F4E7; support@linely.fr</p>
-  <p style="color:rgba(255,255,255,0.75);margin-top:6px;font-size:0.9rem">LINELY &mdash; Le journal que tu vas vraiment tenir.</p>
-</div>
-</div>
+  <!-- 2. Collecte -->
+  <section id="collecte">
+    <h2>2. Données collectées</h2>
 
-<div id="en" class="section">
-<p class="updated">Last updated: April 12, 2026</p>
-<h2>1. Who we are</h2>
-<p>LINELY is a personal journaling app developed by Alexandre Xmls.<br><strong>Contact:</strong> support@linely.fr</p>
-<h2>2. Data we collect</h2>
-<p><strong>Data you provide:</strong></p>
-<ul>
-<li>Account: email, display name, username</li>
-<li>Profile: profile photo, bio (optional)</li>
-<li>Journal: text entries, moods, photos, audio recordings</li>
-<li>Social: shared posts, reactions, private encouragements</li>
-</ul>
-<p><strong>Automatically collected:</strong> streak count, entry count, app version, device type, push notification token.</p>
-<p><strong>We do NOT collect:</strong> GPS location, phone contacts, external browsing data, or biometric data.</p>
-<h2>3. Why we use your data</h2>
-<table>
-<tr><th>Purpose</th><th>Legal basis</th></tr>
-<tr><td>Provide and operate the app</td><td>Contract performance</td></tr>
-<tr><td>Send reminder notifications</td><td>Consent</td></tr>
-<tr><td>Manage LINELY+ subscription</td><td>Contract performance</td></tr>
-<tr><td>Improve user experience</td><td>Legitimate interest</td></tr>
-<tr><td>Prevent fraud and abuse</td><td>Legitimate interest</td></tr>
-<tr><td>Comply with legal obligations</td><td>Legal obligation</td></tr>
-</table>
-<h2>4. Where your data is stored</h2>
-<p>Your data is hosted on <strong>Supabase</strong> (server: <strong>EU West &mdash; Paris, France</strong>), within the EU, in compliance with GDPR and UK GDPR. Subscriptions are managed by <strong>RevenueCat</strong> (GDPR compliant).</p>
-<h2>5. Data sharing</h2>
-<p>We never sell your data. We only share it with:</p>
-<ul>
-<li><strong>Supabase</strong> &mdash; database hosting (EU)</li>
-<li><strong>RevenueCat</strong> &mdash; subscription management</li>
-<li><strong>Apple</strong> &mdash; Sign in with Apple and push notifications</li>
-<li><strong>Competent authorities</strong> &mdash; when required by law</li>
-</ul>
-<h2>6. Data retention</h2>
-<ul>
-<li>Active account: until you delete it</li>
-<li>After deletion: data erased within <strong>30 days</strong></li>
-<li>Billing records: kept 10 years (legal obligation)</li>
-</ul>
-<h2>7. Your rights (GDPR &amp; UK GDPR)</h2>
-<div class="rights">
-<div class="right-item">&#x2705; <strong>Access</strong> your data</div>
-<div class="right-item">&#x2705; <strong>Rectify</strong> your data</div>
-<div class="right-item">&#x2705; <strong>Erase</strong> your data (right to be forgotten)</div>
-<div class="right-item">&#x2705; <strong>Export</strong> your data &mdash; available in-app: Settings &rarr; Export</div>
-<div class="right-item">&#x2705; <strong>Object</strong> to processing</div>
-<div class="right-item">&#x2705; <strong>Restrict</strong> processing</div>
-</div>
-<p style="margin-top:12px">To exercise your rights: <a href="mailto:support@linely.fr">support@linely.fr</a><br>
-Supervisory authorities: <strong>CNIL</strong> &mdash; <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a> &bull; <strong>ICO (UK)</strong> &mdash; <a href="https://www.ico.org.uk" target="_blank">www.ico.org.uk</a></p>
-<h2>8. Your rights (CCPA &mdash; California)</h2>
-<p>California residents may request what personal information we hold and ask for its deletion. <strong>We do not sell your personal information.</strong> Contact: <a href="mailto:support@linely.fr">support@linely.fr</a></p>
-<h2>9. Security</h2>
-<ul>
-<li>Encryption in transit (HTTPS/TLS)</li>
-<li>Encryption at rest (Supabase)</li>
-<li>Row Level Security &mdash; your entries are only accessible by you</li>
-<li>Face ID / Touch ID processed locally on device only</li>
-</ul>
-<h2>10. Age requirement</h2>
-<p>LINELY is intended for users <strong>aged 13 and over</strong>.</p>
-<h2>11. Changes</h2>
-<p>We will notify you of material changes through the app.</p>
-<div class="contact-box">
-  <p style="color:white;font-weight:700;font-size:1.1rem">&#x1F4E7; support@linely.fr</p>
-  <p style="color:rgba(255,255,255,0.75);margin-top:6px;font-size:0.9rem">LINELY &mdash; The journal you'll actually keep.</p>
-</div>
-</div>
+    <h3>Données que tu nous fournis</h3>
 
-</div>
-<script>
-function showLang(lang, btn) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(lang).classList.add('active');
-  btn.classList.add('active');
-  document.documentElement.lang = lang;
-}
-</script>
+    <div class="card">
+      <div class="tag">Compte</div>
+      <div class="card-title">Informations d'inscription</div>
+      <p>Adresse e-mail, nom d'affichage, nom d'utilisateur (pseudo). Optionnellement : photo de profil, bio.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Contenu</div>
+      <div class="card-title">Entrées de journal</div>
+      <p>Texte de tes DailyLines, réponses LinelyTime, GratiLines, CapsLines. Humeur associée, tags. Photos et mémos audio attachés optionnellement.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Social</div>
+      <div class="card-title">Interactions communautaires</div>
+      <p>Posts partagés publiquement, réactions, messages d'encouragement privés. Ces données ne sont visibles que des utilisateurs que tu choisis.</p>
+    </div>
+
+    <h3>Données collectées automatiquement</h3>
+
+    <div class="card">
+      <div class="tag">Localisation</div>
+      <div class="card-title">Localisation approximative (optionnelle)</div>
+      <p>Utilisée uniquement pour afficher la météo et la ville dans tes entrées. Tu peux refuser cette permission sans impact sur les fonctionnalités principales. Nous ne stockons pas tes coordonnées GPS — seulement les informations météo résultantes.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Appareil</div>
+      <div class="card-title">Identifiant d'appareil</div>
+      <p>Identifiant de session Supabase, utilisé exclusivement pour t'authentifier de façon sécurisée. Non partagé avec des tiers à des fins publicitaires.</p>
+    </div>
+
+    <div class="highlight">
+      <p>🔒 <strong>Nous ne collectons pas</strong> : données de localisation précise, contacts, historique de navigation, informations de carte bancaire (gérées par Apple/StoreKit), IDFA ou tout identifiant de tracking publicitaire.</p>
+    </div>
+  </section>
+
+  <!-- 3. Utilisation -->
+  <section id="utilisation">
+    <h2>3. Comment nous utilisons tes données</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Finalité</th>
+          <th>Base légale (RGPD)</th>
+          <th>Données concernées</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fournir le service (journal, sync multi-appareils)</td>
+          <td>Exécution du contrat</td>
+          <td>Toutes les données de contenu</td>
+        </tr>
+        <tr>
+          <td>Authentification et sécurité du compte</td>
+          <td>Exécution du contrat</td>
+          <td>Email, ID utilisateur</td>
+        </tr>
+        <tr>
+          <td>Fonctionnalités sociales (feed, amis)</td>
+          <td>Consentement (opt-in par action)</td>
+          <td>Posts partagés, profil public</td>
+        </tr>
+        <tr>
+          <td>Notifications push personnalisées</td>
+          <td>Consentement (permission iOS)</td>
+          <td>Streak, rappels quotidiens</td>
+        </tr>
+        <tr>
+          <td>Amélioration du service (analytics internes)</td>
+          <td>Intérêt légitime</td>
+          <td>Événements anonymisés (OSLog uniquement)</td>
+        </tr>
+        <tr>
+          <td>Support utilisateur</td>
+          <td>Exécution du contrat</td>
+          <td>Email, description du problème</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Nous <strong>ne vendons jamais</strong> tes données à des tiers et ne les utilisons pas à des fins publicitaires.</p>
+  </section>
+
+  <!-- 4. Stockage -->
+  <section id="stockage">
+    <h2>4. Stockage et sécurité</h2>
+
+    <p>Tes données sont stockées sur <strong>Supabase</strong> (infrastructure PostgreSQL hébergée sur AWS eu-west-1 — Europe). Toutes les communications sont chiffrées en transit (TLS 1.3) et au repos (AES-256).</p>
+
+    <p>Les accès à ta base de données sont protégés par des <strong>Row Level Security (RLS)</strong> PostgreSQL — techniquement, aucun autre utilisateur ne peut accéder à tes entrées, même s'il connaît ton identifiant.</p>
+
+    <p>Les données temporaires (brouillons, préférences) sont stockées localement dans UserDefaults et le Keychain iOS de ton appareil. Elles sont supprimées lors de la déconnexion ou de la suppression du compte.</p>
+
+    <h3>Durée de conservation</h3>
+    <ul>
+      <li><strong>Données de compte et contenu</strong> : conservés tant que ton compte est actif.</li>
+      <li><strong>Après suppression du compte</strong> : suppression immédiate et irréversible de toutes tes données dans Supabase par RPC en cascade.</li>
+      <li><strong>Logs techniques</strong> : 30 jours maximum, uniquement sur OSLog local de l'appareil.</li>
+    </ul>
+  </section>
+
+  <!-- 5. Tiers -->
+  <section id="tiers">
+    <h2>5. Services tiers</h2>
+
+    <div class="card">
+      <div class="card-title">Supabase (stockage et authentification)</div>
+      <p>Base de données, authentification, stockage de fichiers. Hébergé en Europe (AWS eu-west-1). <a href="https://supabase.com/privacy" target="_blank">Politique de confidentialité Supabase →</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Apple / StoreKit (achats in-app)</div>
+      <p>Les abonnements LINELY+ sont gérés intégralement par Apple. Nous ne voyons jamais tes informations de paiement. <a href="https://www.apple.com/legal/privacy/" target="_blank">Politique d'Apple →</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Open-Meteo (météo)</div>
+      <p>Service open source gratuit, sans compte ni tracking. Tes coordonnées approximatives lui sont envoyées uniquement pour récupérer les données météo. Aucune donnée personnelle n'est retenue par Open-Meteo. <a href="https://open-meteo.com/en/terms" target="_blank">Conditions Open-Meteo →</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Anthropic / Claude (prompts LinelyTime)</div>
+      <p>Les prompts de journaling LinelyTime sont générés via l'API Anthropic Claude. Aucun contenu personnel de tes entrées n'est envoyé à Anthropic. Seule la requête de génération de prompt est transmise. <a href="https://www.anthropic.com/legal/privacy" target="_blank">Politique Anthropic →</a></p>
+    </div>
+
+    <p>Nous n'intégrons aucun SDK publicitaire, aucun réseau social tiers, et aucun outil d'analyse comportementale de type Firebase Analytics, Mixpanel ou similaire.</p>
+  </section>
+
+  <!-- 6. Droits -->
+  <section id="droits">
+    <h2>6. Tes droits (RGPD)</h2>
+    <p>En tant qu'utilisateur basé dans l'Espace Économique Européen, tu bénéficies des droits suivants :</p>
+
+    <ul>
+      <li><strong>Droit d'accès</strong> — obtenir une copie de toutes tes données via Settings → Exporter mes données (formats JSON, CSV, PDF disponibles dans l'app).</li>
+      <li><strong>Droit de rectification</strong> — modifier ton profil, ton nom et tes entrées directement dans l'app.</li>
+      <li><strong>Droit à l'effacement</strong> — supprimer ton compte via Settings → Supprimer mon compte. Suppression immédiate et complète.</li>
+      <li><strong>Droit à la portabilité</strong> — exporter tes données dans des formats standards (JSON/CSV) depuis l'app.</li>
+      <li><strong>Droit d'opposition</strong> — désactiver les notifications push depuis les Settings iOS à tout moment.</li>
+      <li><strong>Droit de retrait du consentement</strong> — désactiver le profil public, retirer tes posts partagés, ou supprimer ton compte à tout moment.</li>
+    </ul>
+
+    <p>Pour exercer ces droits ou poser toute question : <a href="mailto:support@linely.app">support@linely.app</a>. Nous répondons sous 30 jours maximum.</p>
+
+    <p>Si tu estimes que le traitement de tes données n'est pas conforme, tu peux déposer une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank">CNIL</a>.</p>
+  </section>
+
+  <!-- 7. Mineurs -->
+  <section id="mineurs">
+    <h2>7. Mineurs</h2>
+    <p>LINELY est destiné aux personnes de <strong>13 ans et plus</strong>. Nous ne collectons pas sciemment de données relatives à des enfants de moins de 13 ans. Si tu penses qu'un mineur de moins de 13 ans a créé un compte, contacte-nous à <a href="mailto:support@linely.app">support@linely.app</a> pour suppression immédiate.</p>
+  </section>
+
+  <!-- 8. Contact -->
+  <section id="contact">
+    <h2>8. Contact</h2>
+    <p>
+      <strong>Alexandre Mls</strong><br>
+      Développeur indépendant — France<br>
+      <a href="mailto:support@linely.app">support@linely.app</a>
+    </p>
+    <p>Cette politique peut être mise à jour. En cas de changement significatif, une notification sera envoyée dans l'app. La date de dernière modification est indiquée en haut de cette page.</p>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2025 LINELY — Alexandre Mls</span>
+  <span>
+    <a href="privacy.html">Confidentialité</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="moderation.html">Modération</a>
+  </span>
+</footer>
+
 </body>
 </html>
