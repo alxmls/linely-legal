@@ -189,8 +189,8 @@
     <span class="logo-name">LINELY</span>
   </a>
   <h1>Politique de confidentialité</h1>
-  <p class="subtitle">Le journal que tu vas vraiment tenir — et tes données restent les tiennes.</p>
-  <p class="updated">Dernière mise à jour : 12 avril 2025</p>
+  <p class="subtitle">Le journal qui te lit — et tes données restent les tiennes.</p>
+  <p class="updated">Dernière mise à jour : 22 avril 2026</p>
 </header>
 
 <main>
@@ -213,13 +213,16 @@
   <section id="qui">
     <h2>1. Qui sommes-nous</h2>
     <p>
-      LINELY est une application iOS de journaling développée et éditée par
+      LINELY est une application iOS de journaling intime développée et éditée par
       <strong>Alexandre Mls</strong>, développeur indépendant basé en France.
     </p>
     <p>
       Contact : <a href="mailto:support@linely.fr">support@linely.fr</a><br>
       Cette politique s'applique à l'application iOS LINELY et à toutes ses fonctionnalités.
     </p>
+    <div class="highlight">
+      <p><strong>Notre engagement</strong> : pas de feed social public, pas de tracking publicitaire, pas de SDK analytics tiers, pas de revente de données. LINELY est volontairement anti-coercitive — l'inverse des apps wellness anxiogènes.</p>
+    </div>
   </section>
 
   <!-- 2. Collecte -->
@@ -231,19 +234,19 @@
     <div class="card">
       <div class="tag">Compte</div>
       <div class="card-title">Informations d'inscription</div>
-      <p>Adresse e-mail, nom d'affichage, nom d'utilisateur (pseudo). Optionnellement : photo de profil, bio.</p>
+      <p>Adresse e-mail, prénom (utilisé pour personnaliser les bilans Claude). Optionnellement : photo de profil, bio. Aucun pseudo public — LINELY n'a pas de feed social.</p>
     </div>
 
     <div class="card">
       <div class="tag">Contenu</div>
-      <div class="card-title">Entrées de journal</div>
-      <p>Texte de tes DailyLines, réponses LinelyTime, GratiLines, CapsLines. Humeur associée, tags. Photos et mémos audio attachés optionnellement.</p>
+      <div class="card-title">Entrées de journal et lettres</div>
+      <p>Texte de tes entrées (DailyLine, Réflexion, Bocal de gratitude), lettres au futur (Horizons), humeur associée, tags. Photos optionnellement attachées (jamais analysées par IA).</p>
     </div>
 
     <div class="card">
-      <div class="tag">Social</div>
-      <div class="card-title">Interactions communautaires</div>
-      <p>Posts partagés publiquement, réactions, messages d'encouragement privés. Ces données ne sont visibles que des utilisateurs que tu choisis.</p>
+      <div class="tag">Cercle intime (à venir)</div>
+      <div class="card-title">Partage restreint avec tes proches choisis</div>
+      <p>À partir de la version 1.1, tu pourras partager certaines lettres avec un cercle de 1 à 5 personnes que tu choisis explicitement. Pas de feed public, pas de likes, pas de commentaires publics. Juste celles et ceux qui comptent. Cette fonctionnalité sera entièrement opt-in.</p>
     </div>
 
     <h3>Données collectées automatiquement</h3>
@@ -251,17 +254,29 @@
     <div class="card">
       <div class="tag">Localisation</div>
       <div class="card-title">Localisation approximative (optionnelle)</div>
-      <p>Utilisée uniquement pour afficher la météo et la ville dans tes entrées. Tu peux refuser cette permission sans impact sur les fonctionnalités principales. Nous ne stockons pas tes coordonnées GPS — seulement les informations météo résultantes.</p>
+      <p>Utilisée pour : (1) suggérer un nom de lieu lorsque tu tagges manuellement où tu écris (ex. "Café du Marais", "Bali"), et (2) afficher la météo dans tes entrées si tu le souhaites. Tu peux refuser cette permission sans impact sur les fonctionnalités principales. Nous ne stockons que la ville/zone — jamais tes coordonnées GPS précises.</p>
     </div>
 
     <div class="card">
-      <div class="tag">Appareil</div>
-      <div class="card-title">Identifiant d'appareil</div>
-      <p>Identifiant de session Supabase, utilisé exclusivement pour t'authentifier de façon sécurisée. Non partagé avec des tiers à des fins publicitaires.</p>
+      <div class="tag">Santé</div>
+      <div class="card-title">Cycle menstruel (optionnel, à venir)</div>
+      <p>À partir de la version 1.1, si tu choisis d'activer le suivi de cycle, LINELY pourra lire (avec ta permission explicite via Apple HealthKit) ou recevoir manuellement la date de tes règles. Cela permet à Claude de noter dans tes bilans des observations subtiles ("ton humeur fluctue avec ton cycle"). Données stockées chiffrées, jamais partagées, jamais utilisées ailleurs que pour ton bilan personnel.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Achats</div>
+      <div class="card-title">Historique d'abonnement LINELY+</div>
+      <p>Statut de ton abonnement (actif/inactif, plan choisi). Géré intégralement via Apple StoreKit — nous ne voyons jamais ton mode de paiement.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Identifiant</div>
+      <div class="card-title">Identifiant utilisateur Supabase</div>
+      <p>UUID généré à la création de ton compte, utilisé exclusivement pour t'authentifier. Non partagé avec des tiers à des fins publicitaires.</p>
     </div>
 
     <div class="highlight">
-      <p>🔒 <strong>Nous ne collectons pas</strong> : données de localisation précise, contacts, historique de navigation, informations de carte bancaire (gérées par Apple/StoreKit), IDFA ou tout identifiant de tracking publicitaire.</p>
+      <p>🔒 <strong>Nous ne collectons pas</strong> : géolocalisation précise (GPS rue), contacts, historique de navigation, mémos audio, informations de carte bancaire (gérées par Apple), IDFA, identifiants publicitaires, données comportementales d'analytics tiers (Firebase, Mixpanel, etc.).</p>
     </div>
   </section>
 
@@ -286,32 +301,39 @@
         <tr>
           <td>Authentification et sécurité du compte</td>
           <td>Exécution du contrat</td>
-          <td>Email, ID utilisateur</td>
+          <td>E-mail, identifiant utilisateur</td>
         </tr>
         <tr>
-          <td>Fonctionnalités sociales (feed, amis)</td>
-          <td>Consentement (opt-in par action)</td>
-          <td>Posts partagés, profil public</td>
+          <td>Bilans mensuels personnels (générés par Claude)</td>
+          <td>Exécution du contrat</td>
+          <td>Entrées du mois, prénom, humeurs, cycle (si activé)</td>
         </tr>
         <tr>
-          <td>Notifications push personnalisées</td>
+          <td>Suggestions de tag de lieu et météo</td>
+          <td>Consentement (permission iOS Localisation)</td>
+          <td>Localisation approximative (ville)</td>
+        </tr>
+        <tr>
+          <td>Notifications push (rappels personnalisés)</td>
           <td>Consentement (permission iOS)</td>
-          <td>Streak, rappels quotidiens</td>
+          <td>Heure préférée, dernière entrée</td>
         </tr>
         <tr>
-          <td>Amélioration du service (analytics internes)</td>
-          <td>Intérêt légitime</td>
-          <td>Événements anonymisés (OSLog uniquement)</td>
+          <td>Cercle intime (à venir, opt-in)</td>
+          <td>Consentement (action explicite par lettre)</td>
+          <td>Lettres choisies, identifiants des proches sélectionnés</td>
         </tr>
         <tr>
           <td>Support utilisateur</td>
           <td>Exécution du contrat</td>
-          <td>Email, description du problème</td>
+          <td>E-mail, description du problème</td>
         </tr>
       </tbody>
     </table>
 
-    <p>Nous <strong>ne vendons jamais</strong> tes données à des tiers et ne les utilisons pas à des fins publicitaires.</p>
+    <p>Nous <strong>ne vendons jamais</strong> tes données à des tiers et ne les utilisons pas à des fins publicitaires. Aucune publicité dans l'application.</p>
+
+    <p><strong>IA / Claude</strong> : tes entrées sont envoyées de façon chiffrée à l'API Anthropic (Claude) uniquement pour générer ton bilan mensuel personnel. Anthropic s'engage contractuellement à <strong>ne pas utiliser ces données pour entraîner ses modèles</strong>. Aucun stockage par Anthropic au-delà du temps de traitement.</p>
   </section>
 
   <!-- 4. Stockage -->
@@ -328,7 +350,7 @@
     <ul>
       <li><strong>Données de compte et contenu</strong> : conservés tant que ton compte est actif.</li>
       <li><strong>Après suppression du compte</strong> : suppression immédiate et irréversible de toutes tes données dans Supabase par RPC en cascade.</li>
-      <li><strong>Logs techniques</strong> : 30 jours maximum, uniquement sur OSLog local de l'appareil.</li>
+      <li><strong>Logs techniques</strong> : 30 jours maximum, uniquement sur OSLog local de l'appareil — non transmis.</li>
     </ul>
   </section>
 
@@ -338,7 +360,7 @@
 
     <div class="card">
       <div class="card-title">Supabase (stockage et authentification)</div>
-      <p>Base de données, authentification, stockage de fichiers. Hébergé en Europe (AWS eu-west-1). <a href="https://supabase.com/privacy" target="_blank">Politique de confidentialité Supabase →</a></p>
+      <p>Base de données, authentification, stockage de fichiers (photos optionnelles attachées aux entrées). Hébergé en Europe (AWS eu-west-1). <a href="https://supabase.com/privacy" target="_blank">Politique de confidentialité Supabase →</a></p>
     </div>
 
     <div class="card">
@@ -347,13 +369,18 @@
     </div>
 
     <div class="card">
+      <div class="card-title">Apple HealthKit (cycle menstruel, opt-in v1.1)</div>
+      <p>Si tu actives le suivi de cycle dans LINELY, l'app peut lire la date de tes règles depuis HealthKit avec ta permission explicite. Aucune donnée HealthKit n'est transmise à des serveurs tiers — Anthropic ne reçoit qu'une mention abstraite ("phase folliculaire", "phase lutéale") pour enrichir le bilan.</p>
+    </div>
+
+    <div class="card">
       <div class="card-title">Open-Meteo (météo)</div>
       <p>Service open source gratuit, sans compte ni tracking. Tes coordonnées approximatives lui sont envoyées uniquement pour récupérer les données météo. Aucune donnée personnelle n'est retenue par Open-Meteo. <a href="https://open-meteo.com/en/terms" target="_blank">Conditions Open-Meteo →</a></p>
     </div>
 
     <div class="card">
-      <div class="card-title">Anthropic / Claude (prompts LinelyTime)</div>
-      <p>Les prompts de journaling LinelyTime sont générés via l'API Anthropic Claude. Aucun contenu personnel de tes entrées n'est envoyé à Anthropic. Seule la requête de génération de prompt est transmise. <a href="https://www.anthropic.com/legal/privacy" target="_blank">Politique Anthropic →</a></p>
+      <div class="card-title">Anthropic / Claude (bilan mensuel personnel)</div>
+      <p>Tes entrées du mois sont envoyées de façon chiffrée à l'API Anthropic Claude pour générer ton bilan personnel. Anthropic s'engage contractuellement à ne pas utiliser ces données pour entraîner ses modèles. Aucun stockage au-delà du temps de traitement (quelques secondes). <a href="https://www.anthropic.com/legal/privacy" target="_blank">Politique Anthropic →</a></p>
     </div>
 
     <p>Nous n'intégrons aucun SDK publicitaire, aucun réseau social tiers, et aucun outil d'analyse comportementale de type Firebase Analytics, Mixpanel ou similaire.</p>
@@ -365,12 +392,12 @@
     <p>En tant qu'utilisateur basé dans l'Espace Économique Européen, tu bénéficies des droits suivants :</p>
 
     <ul>
-      <li><strong>Droit d'accès</strong> — obtenir une copie de toutes tes données via Settings → Exporter mes données (formats JSON, CSV, PDF disponibles dans l'app).</li>
-      <li><strong>Droit de rectification</strong> — modifier ton profil, ton nom et tes entrées directement dans l'app.</li>
-      <li><strong>Droit à l'effacement</strong> — supprimer ton compte via Settings → Supprimer mon compte. Suppression immédiate et complète.</li>
+      <li><strong>Droit d'accès</strong> — obtenir une copie de toutes tes données via Réglages → Exporter mes données (formats JSON, CSV, PDF disponibles dans l'app).</li>
+      <li><strong>Droit de rectification</strong> — modifier ton profil, ton prénom et tes entrées directement dans l'app.</li>
+      <li><strong>Droit à l'effacement</strong> — supprimer ton compte via Réglages → Supprimer mon compte. Suppression immédiate et complète.</li>
       <li><strong>Droit à la portabilité</strong> — exporter tes données dans des formats standards (JSON/CSV) depuis l'app.</li>
-      <li><strong>Droit d'opposition</strong> — désactiver les notifications push depuis les Settings iOS à tout moment.</li>
-      <li><strong>Droit de retrait du consentement</strong> — désactiver le profil public, retirer tes posts partagés, ou supprimer ton compte à tout moment.</li>
+      <li><strong>Droit d'opposition</strong> — désactiver les notifications push depuis les Réglages iOS à tout moment.</li>
+      <li><strong>Droit de retrait du consentement</strong> — révoquer la permission Localisation, HealthKit, ou supprimer ton compte à tout moment.</li>
     </ul>
 
     <p>Pour exercer ces droits ou poser toute question : <a href="mailto:support@linely.fr">support@linely.fr</a>. Nous répondons sous 30 jours maximum.</p>
@@ -398,9 +425,9 @@
 </main>
 
 <footer>
-  <span>© 2025 LINELY — Alexandre Mls</span>
+  <span>© 2026 LINELY — Alexandre Mls</span>
   <span>
-    <a href="privacy.html">Confidentialité</a> ·
+    <a href="index.html">Confidentialité</a> ·
     <a href="support.html">Support</a> ·
     <a href="moderation.html">Modération</a>
   </span>
